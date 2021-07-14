@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:background="#444444"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="#fff"
+        android:layout_alignParentRight="true"
+        android:text="Admin: Kiều tiến đạt"
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/admin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Name:"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/custome_edittext"
+                android:hint="Enter name"
+                android:paddingLeft="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginRight="15dp"
+                android:background="@drawable/custome_signin"
+                android:id="@+id/addbtn"
+                android:hint="Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@drawable/custome_signin"
+                android:id="@+id/searchbtn"
+                android:hint="Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/custome_signin"
+                android:id="@+id/viewallbtn"
+                android:hint="View All"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Tổng số xe: "
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="#fff"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/totalamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_marginTop="10dp"
+            android:id="@+id/recyclerviewHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</RelativeLayout>
